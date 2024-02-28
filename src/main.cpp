@@ -1,7 +1,9 @@
 #include <Arduino.h>
 #include <BluetoothA2DPSink.h>
+#include <A2DPVolumeControl.h>
 
 BluetoothA2DPSink a2dp_sink;
+
 
 void setup() {
     static const i2s_config_t i2s_config = {
@@ -17,7 +19,7 @@ void setup() {
     };
 
     a2dp_sink.set_i2s_config(i2s_config);
-    a2dp_sink.start("MyMusic");
+    a2dp_sink.start("HonkaSpeak");
 
 }
 
